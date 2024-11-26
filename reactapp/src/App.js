@@ -12,26 +12,28 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <nav>
+        {/* <nav>
           <ul>
             <li><Link to="/home">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
-        </nav>
+        </nav> */}
         <Routes>
-          <Route path = '/home' element = {<Home/>}/>
+          {/* <Route path = '/home' element = {<Home/>}/> */}
           <Route path = '/about' element = {<AboutUs/>}/>
           <Route path = '/contact' element = {<ContactUs/>}/>
-        </Routes>
-      </Router>
-
-      <Router>
-        <Routes>
           <Route path='/' element={<Login/>}/>
           <Route path='/dash' element={<Dashboard/>}/>
         </Routes>
       </Router>
+
+      {/* <Router>
+        <Routes>
+          <Route path='/' element={<Login/>}/>
+          <Route path='/dash' element={<Dashboard/>}/>
+        </Routes>
+      </Router> */}
 
       {/* <h1>Student Information Portal</h1>
       <hr /> */}
