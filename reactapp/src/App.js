@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-rou
 import Home from './components/Home';
 import ContactUs from './components/ContactUs';
 import AboutUs from './components/AboutUs';
+import Login from './components/Login';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
@@ -23,8 +25,16 @@ function App() {
           <Route path = '/contact' element = {<ContactUs/>}/>
         </Routes>
       </Router>
-      <h1>Student Information Portal</h1>
-      <hr />
+
+      <Router>
+        <Routes>
+          <Route path='/' element={<Login/>}/>
+          <Route path='/dash' element={<Dashboard/>}/>
+        </Routes>
+      </Router>
+
+      {/* <h1>Student Information Portal</h1>
+      <hr /> */}
       <table>
         <tbody>
           <tr>
